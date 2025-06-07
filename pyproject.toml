@@ -1,0 +1,19 @@
+[project]
+name = "lore-scribe"
+version = "0.1.0"
+description = "A Proof of Concept (PoC) Python desktop application that will transcribe recorded TTRPG sessions and transform them based on certain settings/preferences."
+authors = [
+    {name = "Xenomii",email = "voltzxp@gmail.com"}
+]
+readme = "README.md"
+requires-python = "<3.14, >=3.9"
+dependencies = [
+    "pyside6 (>=6.9.1,<7.0.0)"
+]
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+

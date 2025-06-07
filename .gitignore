@@ -1,0 +1,58 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments (only if created locally)
+.venv/
+env/
+venv/
+ENV/
+env.bak/
+*.env
+
+# Poetry-specific
+poetry.lock.bak
+
+# VS Code and other IDEs
+.vscode/
+.idea/
+*.code-workspace
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# PyInstaller / Build artifacts (if you package later)
+build/
+dist/
+*.spec
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Test cache and coverage
+.pytest_cache/
+.cache/
+.coverage
+coverage.xml
+htmlcov/
+
+# Mypy / Pyright / static analysis
+.mypy_cache/
+.pyright/
+
+# Jupyter (just in case)
+.ipynb_checkpoints/
+
+# Installer-generated files (optional)
+*.exe
+*.msi
+*.dmg
+
+# Local override configs
+*.env.*
