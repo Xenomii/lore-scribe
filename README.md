@@ -17,6 +17,24 @@ Make sure you have the following tools installed:
 
 ---
 
+### ⚡️ Quick Setup (Windows Users)
+
+If you're using Windows and want to install Python, pipx, and Poetry automatically, you can use the provided PowerShell script:
+
+```powershell
+.\setup-python-env.ps1
+```
+
+> ⚠️ Run this from **PowerShell as Administrator**.  
+> It will:
+> - Install Python (via `pyenv-win`)
+> - Install `pipx`
+> - Install `poetry` via `pipx`
+
+After running the script, you can continue from step 4 below to install dependencies and run the app.
+
+---
+
 ### 🔁 Step-by-Step Setup
 
 #### 1. Clone the Repository
