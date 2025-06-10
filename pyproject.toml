@@ -8,7 +8,8 @@ authors = [
 readme = "README.md"
 requires-python = "<3.14, >=3.9"
 dependencies = [
-    "pyside6 (>=6.9.1,<7.0.0)"
+    "pyside6 (>=6.9.1,<7.0.0)",
+    "pydub (>=0.25.1,<0.26.0)"
 ]
 
 [build-system]
