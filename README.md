@@ -14,6 +14,7 @@ Make sure you have the following tools installed:
 - [`pyenv`](https://github.com/pyenv/pyenv) – Python version manager
 - [`pipx`](https://github.com/pypa/pipx) – for installing CLI tools in isolated environments
 - [`poetry`](https://python-poetry.org/) – dependency and virtual environment manager
+- [`ffmpeg`](https://ffmpeg.org/download.html) – required by the application for audio file processing (must be installed and available on your system PATH)
 
 ---
 
@@ -77,7 +78,7 @@ From the root of the project (where `pyproject.toml` is located):
 poetry install
 ```
 
-> This creates a virtual environment and installs all required dependencies including PySide6.
+> This creates a virtual environment and installs all required dependencies including PySide6 and pydub. Make sure `ffmpeg` is installed separately and accessible from your system's PATH.
 
 #### 5. Run the Application
 
@@ -151,6 +152,10 @@ lore-scribe/
   ```
 
   Use that path in your IDE's interpreter settings.
+
+- **`ffmpeg` is not recognized?**
+
+  Ensure `ffmpeg` is [downloaded](https://ffmpeg.org/download.html) and that its `bin/` folder is added to your system PATH. You should be able to run `ffmpeg -version` from your terminal.
 
 ---
 
