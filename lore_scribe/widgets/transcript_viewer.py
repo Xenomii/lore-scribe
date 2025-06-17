@@ -1,5 +1,5 @@
 from PySide6.QtCore import Signal, Qt, QUrl
-from PySide6.QtWidgets import QWidget, QVBoxLayout, QTextEdit
+from PySide6.QtWidgets import QWidget, QVBoxLayout, QTextEdit, QProgressBar
 
 class TranscriptViewer(QWidget):
     file_dropped = Signal(str)
@@ -11,9 +11,14 @@ class TranscriptViewer(QWidget):
         self.text_edit.setReadOnly(True)
         self.text_edit.setPlaceholderText("🎧 Drag an audio file here to begin transcription.")
         self._default_style = self.styleSheet()
+        self.progress_bar = QProgressBar()
+        self.progress_bar.setValue(0)
+        self.progress_bar.setTextVisible(False)
 
         layout = QVBoxLayout()
         layout.addWidget(self.text_edit)
+        layout.addWidget(self.progress_bar)
+        self.progress_bar.hide()
         self.setLayout(layout)
 
         self.setAcceptDrops(True)
@@ -56,3 +61,11 @@ class TranscriptViewer(QWidget):
         """Append text to the existing transcription."""
         current_text = self.text_edit.toPlainText()
         self.text_edit.setPlainText(current_text + "\n" + text)
+
+    def set_progress(self, value: float):
+        """Set the progress bar value."""
+        if value == 0:
+            self.progress_bar.show()
+        self.progress_bar.setValue(int(value))
+        if value >= 100:
+            self.progress_bar.hide()    
